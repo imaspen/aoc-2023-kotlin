@@ -7,7 +7,8 @@ fun printUsage() {
 fun main(args: Array<String>) {
     val dayObject = when (val day = args.getOrNull(0)?.toUIntOrNull()) {
         1u -> days.Day01()
-        in 2u..25u -> TODO("Day $day not implemented")
+        2u -> days.Day02()
+        in 3u..25u -> TODO("Day $day not implemented")
         else -> {
             println("Unrecognised day: $day")
             printUsage()
