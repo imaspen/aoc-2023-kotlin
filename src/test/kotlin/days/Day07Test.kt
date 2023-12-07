@@ -7,9 +7,11 @@ class Day07Test {
 
     @Test
     fun part1() {
+        assertEquals("6440", Day07().part1())
     }
 
     @Test
     fun part2() {
+        assertEquals("5905", Day07().part2())
     }
 }
