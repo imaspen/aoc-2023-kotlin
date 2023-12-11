@@ -1,9 +1,8 @@
 package days
 
-typealias Point = Pair<Int, Int>
-
-
 class Day03 : Day {
+    private data class Point(val x: Int, val y: Int)
+
     private class PartNumber(private val startPosition: Point, val number: Int) {
         override fun toString(): String {
             return "PartNumber(startPosition: $startPosition, number: $number)"
@@ -30,7 +29,7 @@ class Day03 : Day {
         symbols.forEach { position ->
             for (y in -1..1) {
                 for (x in -1..1) {
-                    val part = positions[Point(position.first + x, position.second + y)]
+                    val part = positions[Point(position.x + x, position.y + y)]
                     if (part != null) {
                         validParts.add(part)
                     }
@@ -57,7 +56,7 @@ class Day03 : Day {
             val validParts = hashSetOf<PartNumber>()
             for (y in -1..1) {
                 for (x in -1..1) {
-                    val part = positions[Point(position.first + x, position.second + y)]
+                    val part = positions[Point(position.x + x, position.y + y)]
                     if (part != null) {
                         validParts.add(part)
                     }
